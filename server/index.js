@@ -1,50 +1,14 @@
 import express from "express";
 import { config } from "dotenv";
-import { Sequelize, DataTypes } from "sequelize";
+import POST from "./schema/schema.js";
 import corse from "cors";
-import db from "./db.js";
-config();
 
+config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(corse());
-
-const sequelize = new Sequelize(process.env.DATABASE_URL);
-
-const POST = sequelize.define(
-  "POST",
-  {
-    author: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    cover: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: Sequelize.NOW,
-    }
-  },
-  {
-    tableName: "posts",
-    timestamps: false,
-  }
-);
-
-sequelize.sync();
 
 app.get("/", (req, res) => {
   res.json({
