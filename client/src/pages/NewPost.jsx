@@ -1,11 +1,15 @@
 import React, { useState} from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function NewPost() {
-    const [title, setTitle] = useState('');
-    const [author, setAuthor] = useState('');
-    const [content, setContent] = useState('');
-    const [cover, setCover] = useState('');
+    const API_URL = import.meta.env.VITE_API_URL;
+    const [post, setPost] = useState({
+        title: '',
+        author: '',
+        content: '',
+        cover: ''
+    });
 
     const navigate = useNavigate();
 
@@ -13,61 +17,71 @@ function NewPost() {
         e.preventDefault();
 
         try {
-            const res = await axios.post(`${API_URL}posts`, {
-                title,
-                author,
-                content,
-                cover
-            });
+            const res = await axios.post(`${API_URL}posts`, post);
+
+            setPost({
+                title: '',
+                author: '',
+                content: '',
+                cover: ''
+            })
 
             console.log('Post added:', res.data);
-            setTitle('');
-            setAuthor('');
-            setContent('');
-            setCover('');
         } catch (error) {
             console.error('Error adding post:', error);
         }
     }
 
-  return (
+    const handleChange = (e) => {
+        setPost({
+            ...post,
+            [e.target.name]:e.target.value
+        })
+
+    }
+
+    return (
     <div className="">
-      <div className="">
         <div className="">
-          <h1 className="">Create a new post!</h1>
+        <div className="">
+        <h1 className="">Create a new post!</h1>
         </div>
         <form
-          onSubmit={handleSubmit}
-          className=""
+            onSubmit={handleSubmit}
+            className=""
         >
           <input
             className=""
             type="text"
             placeholder="Why Fireballs Are Overrated..."
-            value={title}
-            onChange={(e) => setTitle({ ...post, title: e.target.value })}
+            value={post.title}
+            name="title"
+            onChange={handleChange}
+            required
+          />
+          <input
+            className=""
+            type="text"
+            placeholder="Who goes there?"
+            value={post.author}
+            name="author"
+            onChange={handleChange}
             required
           />
           <textarea
             className=""
             type="text"
-            placeholder="Who goes there?"
-            value={author}
-            onChange={(e) => setAuthor({ ...post, author: e.target.value })}
+            value={post.content}
+            name="content"
+            onChange={handleChange}
             required
-          ></textarea>
+            > </textarea>
           <input
             className=""
             type="text"
-            value={content}
-            onChange={(e) => setContent({ ...post, content: e.target.value })}
-            required
-          />
-          <input
-            className=""
-            type="url"
-            value={cover}
-            onChange={(e) => setCover({ ...post, cover: e.target.value })}
+            value={post.cover}
+            name="cover"
+            onChange={handleChange}
             required
           />
           <button
