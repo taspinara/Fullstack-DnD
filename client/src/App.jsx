@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <Router>
-      <div className="appContainer">
-        <h1 className="text-2xl">Fullstack DnD</h1>
-      </div>
+    <div className="appContainer">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/post/:id" element={<PostDetails />} />
+        <Route path="/" element={<MainLayout />} >
+          <Route index element={<HomePage />} />
+        </Route>
       </Routes>
-    </Router>
+    </div>
   );
 }
 
