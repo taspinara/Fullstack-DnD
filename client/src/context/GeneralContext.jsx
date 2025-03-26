@@ -22,6 +22,13 @@ function GeneralContextProvider({ children }) {
     }
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!post.title || !post.author || !post.content || !post.cover) return alert("Please fill the form");
+  //   setPosts([{ ...post, ...posts}]);
+  //   setPost({ title: "", author: "", content: "", cover: "" });
+  // };
+
   return (
     <div>
       <GeneralContext.Provider
@@ -31,6 +38,7 @@ function GeneralContextProvider({ children }) {
           loading,
           error,
           getAllFetchPosts,
+          handleSubmit,
           API_URL
         }}
       >
