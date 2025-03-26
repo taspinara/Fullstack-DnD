@@ -50,13 +50,17 @@ function UpdatePost() {
   };
 
   return (
-    <div className="updateContainer">
-      <h2>Update Post</h2>
+    <div className="updateContainer w-full h-[100%] flex flex-col justify-center items-center gap-3 p-8">
+      <h2 className="text-[1.3rem] tracking-[1px] mb-2">{`Update ${post.title}`}</h2>
       {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+      <form
+        onSubmit={handleSubmit}
+        className="form w-[40%] flex flex-col gap-2 border border-gray-200 rounded py-6 p-4"
+      >
+        <div className="form-group flex flex-col gap-2">
           <label htmlFor="author">Author</label>
           <input
+            className=" border border-gray-200 rounded px-3 py-1.5"
             type="text"
             id="author"
             name="author"
@@ -64,9 +68,10 @@ function UpdatePost() {
             onChange={handleChange}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group flex flex-col gap-2">
           <label htmlFor="title">Title</label>
           <input
+            className=" border border-gray-200 rounded px-3 py-1.5"
             type="text"
             id="title"
             name="title"
@@ -74,18 +79,20 @@ function UpdatePost() {
             onChange={handleChange}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group flex flex-col gap-2">
           <label htmlFor="content">Content</label>
           <textarea
+            className=" border border-gray-200 rounded px-3 py-1.5"
             id="content"
             name="content"
             value={post.content}
             onChange={handleChange}
           ></textarea>
         </div>
-        <div className="form-group">
-          <label htmlFor="cover">Cover</label>
+        <div className="form-group flex flex-col gap-2">
+          <label htmlFor="cover">Cover-image</label>
           <input
+            className=" border border-gray-200 rounded px-3 py-1.5"
             type="text"
             id="cover"
             name="cover"
@@ -93,7 +100,10 @@ function UpdatePost() {
             onChange={handleChange}
           />
         </div>
-        <button onClick={() => navigate("/")} type="submit" disabled={loading}>
+        <button
+          onClick={() => navigate("/")}
+          className="btn btn-accent text-white text-[1.1rem] bg-blue-600 outline-0 border-0 tracking-[1px] mt-3"
+        >
           {loading ? "Loading..." : "Update"}
         </button>
       </form>
