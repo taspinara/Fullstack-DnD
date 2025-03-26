@@ -45,7 +45,7 @@ function NewPost() {
             type="text"
             placeholder="Why Fireballs Are Overrated..."
             value={title}
-            onChange={(e) => setPost({ ...post, title: e.target.value })}
+            onChange={(e) => setTitle({ ...post, title: e.target.value })}
             required
           />
           <textarea
@@ -53,21 +53,21 @@ function NewPost() {
             type="text"
             placeholder="Who goes there?"
             value={author}
-            onChange={(e) => setPost({ ...post, author: e.target.value })}
+            onChange={(e) => setAuthor({ ...post, author: e.target.value })}
             required
           ></textarea>
           <input
             className=""
             type="text"
             value={content}
-            onChange={(e) => setPost({ ...post, content: e.target.value })}
+            onChange={(e) => setContent({ ...post, content: e.target.value })}
             required
           />
           <input
             className=""
             type="url"
             value={cover}
-            onChange={(e) => setPost({ ...post, cover: e.target.value })}
+            onChange={(e) => setCover({ ...post, cover: e.target.value })}
             required
           />
           <button
