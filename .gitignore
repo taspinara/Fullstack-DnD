@@ -33,13 +33,14 @@ coverage
 bower_components
 
 # node-waf configuration
-.lock-wscript
+.lock-script
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
-node_modules/
+/server/node_modules/
+/client/node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -73,7 +74,7 @@ web_modules/
 .yarn-integrity
 
 # dotenv environment variable files
-.env
+/server/.env
 .env.development.local
 .env.test.local
 .env.production.local
