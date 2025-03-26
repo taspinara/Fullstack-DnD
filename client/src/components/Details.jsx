@@ -40,7 +40,7 @@ function Details() {
           <div className="detailsCard flex justify-start items-center flex-wrap gap-10">
             <div className="left w-[40rem]">
               <img
-                className="w-full"
+                className="w-full p-1"
                 src={post.cover}
                 alt={post.title}
               />
