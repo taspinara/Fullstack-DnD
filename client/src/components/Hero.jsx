@@ -6,7 +6,7 @@ const Hero = () => {
             <div className="hero-overlay bg-black bg-opacity-60"></div>
             <div className="hero-content text-center">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">Dungeon & Dragons</h1>
+                    <h1 className="mb-5 text-5xl font-bold">Dungeons & Dragons</h1>
                     <p className="mb-5">
                         Step into a realm of epic quests, mystical lore, and boundless creativity!
                     </p>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const PostCard = ({ post }) => {
     return (
-        <Link to={`/post/${post.id}`} className="no-underline">
+        <Link to={`/more-about/${post.id}`} className="no-underline">
             <div className="card card-compact bg-base-100 shadow-xl h-full flex flex-col">
                 <figure className="h-48">
                     <img
