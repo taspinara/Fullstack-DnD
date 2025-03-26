@@ -27,6 +27,10 @@ function HomePage() {
     fetchPosts();
   }, []);
 
+  const handleDelete = (deletedPostId) => {
+    setPosts(posts.filter((post) => post.id !== deletedPostId));
+  };
+
   return (
     <div className="min-h-screen bg-cover bg-center bg-fixed">
       {/* Hero Section */}
@@ -37,7 +41,7 @@ function HomePage() {
           <h2 className="text-3xl font-bold mb-6 text-center">All D&D Posts</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {posts.map((post) => (
-              <PostCard key={post.id} post={post} />
+              <PostCard key={post.id} post={post} deletedPostId={handleDelete} />
             ))}
           </div>
         </div>
