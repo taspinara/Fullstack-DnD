@@ -47,7 +47,7 @@ const PostCard = ({ post, deletedPostId }) => {
             <p className="text-sm text-gray-500">Author: {post.author}</p>
           </div>
         </div>
-        <div className="btns flex items-center gap-2">
+        <div className="btns flex items-center gap-2 p-4">
           <button
             onClick={handleUpdate}
             className="btn btn-outline btn-accent"
