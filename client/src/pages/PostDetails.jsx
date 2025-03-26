@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-function Post() {
+function PostDetails() {
   const { id } = useParams();
   const APIURL = import.meta.env.VITE_API_URL;
   const [post, setPost] = useState(null);
@@ -42,4 +42,4 @@ function Post() {
   );
 }
 
-export default Post;
+export default PostDetails;

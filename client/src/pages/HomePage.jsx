@@ -3,12 +3,24 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PostCard from '../components/PostCard';
 import Hero from '../components/Hero';
+import axios from 'axios';
 
 function HomePage() {
+  const APIURL = import.meta.env.VITE_API_URL;
   const [posts, setPosts] = useState([]);
   console.log('first')
 
-  // Fetch all posts
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+            const res = await axios.get(`${APIURL}/posts`);
+            setPosts(res.data);
+            } catch (error) {
+            console.error(error);
+            }
+        };
+        fetchPosts();
+    }, []);
 
   return (
     <div className="min-h-screen bg-cover bg-center bg-fixed">
