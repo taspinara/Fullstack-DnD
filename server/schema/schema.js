@@ -3,7 +3,10 @@ import { config } from "dotenv";
 
 config();
 
-const sequelize = new Sequelize(process.env.DATABASE_URL);
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: "postgres",
+  logging: false,
+});
 
 const POST = sequelize.define(
   "POST",

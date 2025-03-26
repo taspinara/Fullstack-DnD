@@ -1,9 +1,12 @@
 import { Routes, Route } from "react-router-dom";
+import Details from "./components/Details";
 
 function App() {
   return (
-    <div className="appContainer">
-      <h1 className="text-2xl">Fullstack DnD</h1>
+    <div className="appContainer w-full min-h-[100vh] flex flex-col">
+      <Routes>
+        <Route path="/more-about/:id" element={<Details />} />
+      </Routes>
     </div>
   );
 }
