@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Details from "./components/Details";
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
-import PostDetails from "./pages/PostDetails";
+
 
 function App() {
   return (
