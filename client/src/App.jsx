@@ -3,6 +3,7 @@ import Details from "./components/Details";
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import NewPost from "./pages/NewPost";
+import UpdatePost from "./components/UpdatePost";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/more-about/:id" element={<Details />} />
           <Route path="/create" element={<NewPost />} />
+          <Route path="/update/:id" element={<UpdatePost />} />
         </Route>
       </Routes>
     </div>
