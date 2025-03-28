@@ -60,7 +60,7 @@ function Details() {
           </div>
         </div>
         <button
-          className="bg-blue-500 hover:bg-blue-700 transition-all duration-[.3s] text-white font-bold py-2 px-4 rounded cursor-pointer"
+          className="bg-purple-600 hover:bg-purple-700 transition-all duration-[.3s] text-white font-bold py-2 px-4 rounded cursor-pointer"
           onClick={() => navigate("/")}
         >
           Go back

@@ -55,12 +55,12 @@ function UpdatePost() {
       {error && <p>{error}</p>}
       <form
         onSubmit={handleSubmit}
-        className="form w-[40%] flex flex-col gap-2 border border-gray-200 rounded py-6 p-4"
+        className="form w-[50%] flex flex-col gap-2 border border-gray-200 rounded py-6 p-4 bg-[#BB8DD0]"
       >
         <div className="form-group flex flex-col gap-2">
           <label htmlFor="author">Author</label>
           <input
-            className=" border border-gray-200 rounded px-3 py-1.5"
+            className=" border border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
             type="text"
             id="author"
             name="author"
@@ -71,7 +71,7 @@ function UpdatePost() {
         <div className="form-group flex flex-col gap-2">
           <label htmlFor="title">Title</label>
           <input
-            className=" border border-gray-200 rounded px-3 py-1.5"
+            className=" border border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
             type="text"
             id="title"
             name="title"
@@ -82,7 +82,7 @@ function UpdatePost() {
         <div className="form-group flex flex-col gap-2">
           <label htmlFor="content">Content</label>
           <textarea
-            className=" border border-gray-200 rounded px-3 py-1.5"
+            className=" border h-50 border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
             id="content"
             name="content"
             value={post.content}
@@ -90,9 +90,9 @@ function UpdatePost() {
           ></textarea>
         </div>
         <div className="form-group flex flex-col gap-2">
-          <label htmlFor="cover">Cover-image</label>
+          <label htmlFor="cover">Cover Image</label>
           <input
-            className=" border border-gray-200 rounded px-3 py-1.5"
+            className=" border border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
             type="text"
             id="cover"
             name="cover"
@@ -102,7 +102,7 @@ function UpdatePost() {
         </div>
         <button
           onClick={() => navigate("/")}
-          className="btn btn-accent text-white text-[1.1rem] bg-blue-600 outline-0 border-0 tracking-[1px] mt-3"
+          className="btn btn-accent text-white text-[1.1rem] bg-purple-600 hover:bg-purple-700 outline-0 border-0 tracking-[1px] mt-3 mx-[40%]"
         >
           {loading ? "Loading..." : "Update"}
         </button>

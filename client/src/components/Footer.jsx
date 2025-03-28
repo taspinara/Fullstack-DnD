@@ -3,8 +3,8 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-pink-600 to-purple-600 text-white p-10 flex flex-col">
-      <div className="footer sm:footer-horizontal bg-gradient-to-r from-pink-600 to-purple-600 text-white p-10">
+    <footer className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-10 flex flex-col py-5">
+      <div className="footer sm:footer-horizontal bg-gradient-to-r from-pink-600 to-purple-600 text-white px-10 py-5">
         <aside>
           <img src={logo} alt="ACME Industries Logo" className="w-50 h-auto mb-2" />
           <p>Thanks for visiting our realm of adventure!</p>

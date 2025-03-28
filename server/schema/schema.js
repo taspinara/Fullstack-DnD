@@ -28,8 +28,8 @@ const POST = sequelize.define(
           msg: "Title is required",
         },
         len: {
-          args: [3, 20],
-          msg: "Title must be between 10 and 150 characters long",
+          args: [1, 150],
+          msg: "Title must be between 1 and 150 characters long",
         },
       },
     },
@@ -41,8 +41,8 @@ const POST = sequelize.define(
           msg: "Content is required",
         },
         len: {
-          args: [10, 150],
-          msg: "Content must be between 10 and 150 characters long",
+          args: [1, 500],
+          msg: "Content must be between 1 and 500 characters long",
         },
       },
     },
