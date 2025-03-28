@@ -41,59 +41,69 @@ function NewPost() {
     }
 
     return (
-    <div className="">
-        <div className="">
-        <div className="">
-        <h1 className="">Create a new post!</h1>
-        </div>
+    <div className="createContainer w-full h-[100%] flex flex-col justify-center items-center gap-3 p-8">
+        <h1 className="text-[1.3rem] tracking-[1px] mb-2 font-bold underline">Create a new post!</h1>
         <form
             onSubmit={handleSubmit}
-            className=""
+            className="form w-[50%] flex flex-col gap-2 border border-purple-700 rounded py-6 p-4 bg-[#BB8DD0]"
         >
-          <input
-            className=""
-            type="text"
-            placeholder="Why Fireballs Are Overrated..."
-            value={post.title}
-            name="title"
-            onChange={handleChange}
-            required
-          />
-          <input
-            className=""
-            type="text"
-            placeholder="Who goes there?"
-            value={post.author}
-            name="author"
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            className=""
-            type="text"
-            value={post.content}
-            name="content"
-            onChange={handleChange}
-            required
-            > </textarea>
-          <input
-            className=""
-            type="text"
-            value={post.cover}
-            name="cover"
-            onChange={handleChange}
-            required
-          />
+          <div className="form flex flex-col gap-2">
+            <label htmlFor="title">Title</label>
+            <input
+              className="border border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
+              type="text"
+              placeholder="Why Fireballs Are Overrated..."
+              value={post.title}
+              name="title"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form flex flex-col gap-2">
+            <label htmlFor="author">Author</label>
+            <input
+              className="border border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
+              type="text"
+              placeholder="Who goes there?"
+              value={post.author}
+              name="author"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form flex flex-col gap-2">
+            <label htmlFor="content">Content</label>
+            <textarea
+              className="border h-50 border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
+              type="text"
+              value={post.content}
+              name="content"
+              placeholder="Only these adventurers three can avert a murder most foul..."
+              onChange={handleChange}
+              required
+              > </textarea>
+          </div>
+          <div className="form flex flex-col gap-2">
+          <label htmlFor="cover">Cover Image</label>
+            <input
+              className="border border-gray-200 rounded px-3 py-1.5 focus:outline-purple-700 focus:ring-0 focus:border-purple-700 bg-[#BC9FC9]"
+              placeholder="https://..."
+              type="text"
+              value={post.cover}
+              name="cover"
+              onChange={handleChange}
+              required
+            />
+          </div>
           <button
             type="submit"
             onClick={() => navigate("/")}
-            className=""
+            className="btn btn-accent text-white text-[1.1rem] bg-purple-600 hover:bg-purple-700 outline-0 border-0 tracking-[1px] mt-3 mx-[40%]"
           >
             Create Post
           </button>
         </form>
-      </div>
-    </div>
+  </div>
   );
 }
 

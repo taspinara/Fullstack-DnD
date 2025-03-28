@@ -10,7 +10,7 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="flex-none">
-        <Link to='/create' className="btn btn-accent">
+        <Link to='/create' className="btn btn-accent bg-purple-600 hover:bg-purple-700 text-white mr-4">
           Create Post
         </Link>
       </div>
