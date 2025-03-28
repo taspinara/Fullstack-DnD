@@ -34,7 +34,7 @@ function Details() {
 
   return (
     <div className="detailsContainer w-full min-h-[100vh] flex flex-col justify-start items-start px-[2rem] py-[2rem] gap-5">
-      <h2 className="text-[1.5rem]">{`Details of ${post.title}`}</h2>
+      <h2 className="text-md">{`Details of ${post.title}`}</h2>
       <section className="detailsSection w-full h-[100%] flex flex-col justify-start items-start gap-10">
         <div className="details w-full h-[100%] flex flex-col justify-start items-start">
           <div className="detailsCard flex justify-start items-center flex-wrap gap-10">
@@ -45,16 +45,16 @@ function Details() {
                 alt={post.title}
               />
             </div>
-            <div className="right w-[60rem] flex flex-col justify-start items-start">
+            <div className="right w-[60rem] flex flex-col justify-start items-start ">
               <h3 className="text-[2rem] font-bold tracking-[1px]">{post.title}</h3>
-              <p className="text-white text-[1.3rem]">
-                <strong className="text-white">Author:</strong> {post.author}
+              <p className="text-white">
+                <strong className="text-black">Author:</strong> {post.author}
               </p>
-              <p className="text-white text-[1.3rem]">
-                <strong className="text-white">Date:</strong> {post.date}
+              <p className="text-white">
+                <strong className="text-black">Date:</strong> {post.date}
               </p>
-              <p className="text-white text-[1.3rem]">
-                <strong className="text-white">Content:</strong> {post.content}
+              <p className="text-white text-justify">
+                <strong className="text-black">Content:</strong> {post.content}
               </p>
             </div>
           </div>
