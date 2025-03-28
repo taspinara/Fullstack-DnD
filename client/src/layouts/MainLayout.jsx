@@ -3,7 +3,6 @@ import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const MainLayout = () => {
-  console.log('first')
 
   return (
     <div className="flex flex-col min-h-screen bg-[#B793C7]">
