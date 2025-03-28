@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import NewPost from "./pages/NewPost";
 import UpdatePost from "./components/UpdatePost";
+import AboutUs from "./pages/AboutUs";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/more-about/:id" element={<Details />} />
           <Route path="/create" element={<NewPost />} />
           <Route path="/update/:id" element={<UpdatePost />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Route>
       </Routes>
     </div>

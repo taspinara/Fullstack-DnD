@@ -9,7 +9,10 @@ const NavBar = () => {
           <img src={logo} alt="D&D Blog Logo" className="w-30 h-auto mr-2" />
         </Link>
       </div>
-      <div className="flex-none">
+      <div className="flex-none flex items-center gap-4">
+        <Link to='/about-us' className="btn btn-secondary ml-4">
+          About Us
+        </Link>
         <Link to='/create' className="btn btn-accent">
           Create Post
         </Link>
